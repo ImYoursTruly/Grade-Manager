@@ -1,7 +1,7 @@
 A Java program made by me. I only asked ChatGPT for an OOP problem and I think I got it not as bad as I thought 
 it would be since I'm still a 1st year at Information Technology with no idea of OOP, just main and methods as of now.
 
-- - - - - 2 / 13 / 26 - - - - - 
+| | | | | - 2 / 13 / 26 - | | | | |
 
 - - So what does my program do? - -
 
@@ -13,7 +13,7 @@ Additionally, I added Analytics at the end of the student profile/s to display w
 I only got to make who got the highest average. I wanted to do more such as who got the highest in each subject, but
 exhaustion got ahead of me haha, but I'll keep on improving my first program to publish on github.
 
-- - How does the class GradeManager works? - -
+| | - How does the class GradeManager works? - | |
  
 This is how I gravely misunderstood the concept of OOP(as for ChatGPT), since I used 2D arrays to store data from each student
 and their grades on each subject. I still don't get it, but I think you store informations using multiple objects in the main? 
@@ -43,4 +43,4 @@ my progress in my programming career as some who's still 1st year College in the
 a networking major, or a web dev one. I wanted to use my time to sharpen my skills, at the same, document it in this website. Who knows?
 Maybe one day a job recruiter stumbled on my page while I'm job seeking. Haha, too delusional.
 
-- - - - - - - - - - README and program made by yours truly - - - - - - - - - -
+| | | | | | | | | | - README and program made by yours truly - | | | | | | | | | |
