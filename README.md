@@ -3,7 +3,7 @@ it would be since I'm still a 1st year at Information Technology with no idea of
 
 | | | | | - 2 / 13 / 26 - | | | | |
 
-| | - So what does my program do? - ||
+| | - So what does my program do? - | |
 
 The class was composed of three main functions:
   - To ask for Student name, ID, Subjects, and Grade for each subjects.
