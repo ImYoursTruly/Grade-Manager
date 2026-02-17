@@ -1,66 +1,62 @@
 package yourstruly.OOPPractice;
 
-import java.util.*; // 13:30 (14:34-15:45) - 17:15
+import java.util.*;
 
 public class Classroom{
     
     public static void main(String[] args){
         
         Scanner input = new Scanner(System.in);
+        String[] subjects = {"Science", "Math", "Programming"};
         
         System.out.println("- - - - - - - - For Input - - - - - - - -\n");
         
         System.out.print("Enter number of students: ");
             int studentSize = input.nextInt();
             input.nextLine();
-            
-        String[] students = new String[studentSize];
-        String[] studentID = new String[studentSize];
-        String[] subjects = {"Science", "Math", "Programming"};
-        int[][] grades = new int[studentSize][3];
+            GradeManager[] student = new GradeManager[studentSize];
             
         System.out.println("");
         
-        System.out.println("Enter the name/s of " + studentSize + " student/s:");
-            for(int i = 0; i < students.length; i++){
-                System.out.print("Enter student No." + (i + 1) + "'s name: ");
-                    students[i] = input.nextLine();
-            }
+        for(int i = 0 ; i < student.length; i++){
+            System.out.print("Enter student no." + (i + 1) + "'s name: ");
+                String studentName = input.nextLine();
+                
+            System.out.print("Enter " + studentName + "'s ID: ");
+                String studentID = input.nextLine();
             
-        System.out.println("\n- - - - - - - - - - - - - - - - - - - - -\n");
-        
-        System.out.println("Enter the ID/s of " + studentSize + " student/s:");
-            for(int i = 0; i < studentID.length; i++){
-                System.out.print("Enter " + students[i] + "'s ID: ");
-                    studentID[i] = input.nextLine();
-            }
-            
-        System.out.println("\n- - - - - - - - - - - - - - - - - - - - -\n");
-        
-        System.out.println("Enter the grade/s of " + studentSize + " student/s: ");
-            for(int x = 0; x < grades.length; x++){
-                System.out.println("For " + students[x] + "'s grades:");
-                for(int y = 0; y < grades[x].length; y++){
-                    System.out.print(subjects[y] + ": ");
-                    grades[x][y] = input.nextInt();
+            int[] grades = new int[subjects.length];
+            System.out.println("Enter " + studentName + "'s grades: ");
+                for(int j = 0; j < grades.length; j++){
+                    System.out.print(subjects[j] + ": ");
+                        grades[j] = input.nextInt();
                 }
-                System.out.println("");
-            }
-            input.nextLine();
+                
+            input.nextLine();    
+            student[i] = new GradeManager(studentName, studentID, subjects, grades);
             
-        GradeManager GM = new GradeManager(students, studentID, subjects, grades);
-        int[] average = GM.computeAverage();
-        String[] letterGrade = GM.computeLetterGrade();
-        String[] remarks = GM.computeRemarks();
+            if(i < student.length - 1)
+                System.out.println("\n- - - - - - - - - - - - - - - - - - - - -\n");
+        }
         
-        System.out.println("- - - - - - Student Profile/s - - - - - -\n");
+        System.out.println("\n- - - - - - Student Profile/s - - - - - -\n");
         
-        GM.displayStudentInfo(average, letterGrade, remarks);
+        for(int i = 0; i < student.length; i++){
+            student[i].displayStudentProfile();
+            System.out.println("");
+        }
         
         System.out.println("- - - - - - - - Analytics - - - - - - - -\n");
         
-        GM.displayAnalytics(students, average);
-        
-        System.exit(0);
+        int maxAve = 0;
+        String maxAveName = "";
+        for(int i = 0; i < student.length; i++){
+            int average = student[i].computeAverage();
+            if(average > maxAve){
+                maxAve = average;
+                maxAveName = student[i].getName();
+            }
+        } System.out.print("Highest average: " + maxAveName + " -> " + maxAve);
+    
     }
 }
