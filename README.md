@@ -1,6 +1,18 @@
 A Java program made by me. I only asked ChatGPT for an OOP problem and I think I got it not as bad as I thought 
 it would be since I'm still a 1st year at Information Technology with no idea of OOP, just main and methods as of now.
 
+| | | | | - 2 / 17 / 26 - | | | | |
+
+Changed data storing method from relying on arrays/2D arrays to objects. Making the class look like it can only handle one
+student.
+  - I changed one of the main function of my program to store student infromations. Now, I the class can handle one student
+    or multiple by using array when declaring the class( GradeManager[] student = new GradeManager[size]; ). I just thought
+    this is the way OOP should be understood.
+
+More cleaner Run output.
+  - Unlike before where you input all names first before the grade of each students, I finally made it so that you can input
+    name and grades at the same time before the next student.
+
 | | | | | - 2 / 13 / 26 - | | | | |
 
 | | - So what does my program do? - | |
