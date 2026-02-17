@@ -1,3 +1,4 @@
+# Grade Manager
 A Java program made by me. I only asked ChatGPT for an OOP problem and I think I got it not as bad as I thought 
 it would be since I'm still a 1st year at Information Technology with no idea of OOP, just main and methods as of now.
 
