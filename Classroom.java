@@ -15,10 +15,10 @@ public class Classroom{
             int studentSize = input.nextInt();
             input.nextLine();
             GradeManager[] student = new GradeManager[studentSize];
-            
-        System.out.println("");
         
         for(int i = 0 ; i < student.length; i++){
+            System.out.println("\n- - - - - - - - - - - - - - - - - - - - -\n");
+            
             System.out.print("Enter student no." + (i + 1) + "'s name: ");
                 String studentName = input.nextLine();
                 
@@ -34,9 +34,6 @@ public class Classroom{
                 
             input.nextLine();    
             student[i] = new GradeManager(studentName, studentID, subjects, grades);
-            
-            if(i < student.length - 1)
-                System.out.println("\n- - - - - - - - - - - - - - - - - - - - -\n");
         }
         
         System.out.println("\n- - - - - - Student Profile/s - - - - - -\n");
@@ -60,3 +57,4 @@ public class Classroom{
     
     }
 }
+
